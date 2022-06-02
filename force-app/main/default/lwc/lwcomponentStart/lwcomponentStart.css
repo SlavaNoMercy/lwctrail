@@ -1,0 +1,21 @@
+.searchBox {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.contactData,
+.button,
+div.searchBox div.slds-p-around.medium.lgc-bg .slds-form-element {
+  padding: 10px;
+}
+
+div.searchBox
+  div.slds-p-around.medium.lgc-bg
+  div.contactInputs
+  div.button
+  element
+  button.slds-button.slds-button_success {
+  background-color: cornflowerblue;
+  border: aqua;
+}

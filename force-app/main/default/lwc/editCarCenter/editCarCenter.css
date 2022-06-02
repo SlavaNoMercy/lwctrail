@@ -1,0 +1,9 @@
+lightning-layout-item.layoutItem {
+  width: -webkit-fill-available;
+  margin: 10px;
+}
+
+form {
+  width: -webkit-fill-available;
+  margin: 10px;
+}

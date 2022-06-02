@@ -1,11 +1,64 @@
 <template>
-    <lightning-card title="ContactInformation" icon-name="custom:custom14">
-        <div class="slds-m-around_medium">
-           <template for:each={contacts} for:item="contact">
-              <div key={contact.Id}>
-                 {contact.Name}, {contact.Title}
-              </div>
-           </template>
+  <div class="searchBox">
+    <div class="slds-p-around medium lgc-bg">
+      <div class="contactInputs">
+        <lightning-input
+          label="Enter Last Name"
+          value={contactName}
+          onblur={handleInputName}
+        ></lightning-input>
+        <lightning-input
+          label="Enter Email"
+          value={contactEmail}
+          onblur={handleInputEmail}
+        ></lightning-input>
+        <lightning-input
+          label="Enter Phone"
+          value={contactPhone}
+          onblur={handleInputPhone}
+        ></lightning-input>
+        <div class="button">
+          <lightning-button
+            label="Submit"
+            title="Successful Action"
+            onclick={inserContact}
+          ></lightning-button>
         </div>
-     </lightning-card>
+      </div>
+      <lightning-input
+        label="Input Name"
+        value={searchKey}
+        onblur={handleEvent}
+      ></lightning-input>
+      <!-- <lightning-record-view-form record-id={contact.contactId} object-api-name="Contact">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="Email"></lightning-output-field>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-output-field field-name="MobilePhone"></lightning-output-field>
+                    <lightning-output-field field-name="Id"></lightning-output-field>
+                </div>
+            </div>
+            </lightning-record-view-form> -->
+      <!-- <lightning-record-form record-id={contact.contactId} object-api-name="Contact" fields={fields} mode="edit">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Email"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="MobilePhone"></lightning-input-field>
+                <lightning-input-field field-name={Id}></lightning-input-field>
+            </div>
+          </lightning-record-form> -->
+      <lightning-record-form
+        record-id={contact.contactId}
+        object-api-name="Contact"
+        layout-type="Full"
+        mode="view"
+      >
+      </lightning-record-form>
+    </div>
+  </div>
 </template>

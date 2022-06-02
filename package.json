@@ -24,9 +24,9 @@
     "@salesforce/sfdx-lwc-jest": "^1.1.0",
     "eslint": "^8.11.0",
     "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^26.1.2",
+    "eslint-plugin-jest": "^26.4.6",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.7",
+    "lint-staged": "^12.5.0",
     "prettier": "^2.6.0",
     "prettier-plugin-apex": "^1.10.0"
   },
@@ -37,5 +37,8 @@
     "**/{aura,lwc}/**": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "@salesforce/cli": "^1.30.0"
   }
 }
